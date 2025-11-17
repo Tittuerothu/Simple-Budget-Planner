@@ -653,7 +653,6 @@ private fun TransactionSheet(
     ModalBottomSheet(
         onDismissRequest = onDismiss,
         sheetState = sheetState,
-        // custom drag handle (works on all Material3 versions)
         dragHandle = {
             Box(
                 Modifier
