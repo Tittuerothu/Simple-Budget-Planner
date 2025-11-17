@@ -194,18 +194,6 @@ Balance is computed as `cycle.income - totalSpent` inside `CycleLedger`. Because
 * Manual smoke tests covered zero-income cycles, big amounts, invalid month/year entry, delete-with-expenses, and editing older months.
 * The unidirectional data flow gives each screen a single source of truth, simplifying debugging.
 
----
-
-## 16. Conclusion
-
-Blueprint Budget fulfills the budgeting brief with a visually distinct, dune-inspired experience. Users can:
-- Create and edit cycles with month/year defaults.
-- Adjust income targets.
-- Add, edit, and delete dated expenses.
-- Track surplus instantly.
-- Explore trends through a custom Compose chart with summary cards.
-
-The layered architecture keeps the codebase maintainable, testable, and ready for future expansions like categories, widgets, or sync.
 
 
 
