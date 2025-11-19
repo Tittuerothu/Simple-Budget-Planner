@@ -305,6 +305,6 @@ private fun InsightChart(points: List<InsightPoint>) {
 }
 
 private val currencyFormatter: NumberFormat
-    get() = NumberFormat.getCurrencyInstance()
+    get() = NumberFormat.getCurrencyInstance(Locale.GERMANY) // Uses Euro (€) symbol
 
 

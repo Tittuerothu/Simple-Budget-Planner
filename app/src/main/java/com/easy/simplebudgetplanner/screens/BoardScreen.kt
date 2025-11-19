@@ -632,7 +632,7 @@ private fun CycleComposerSheet(
 
 
 private val currencyFormatter: NumberFormat
-    get() = NumberFormat.getCurrencyInstance()
+    get() = NumberFormat.getCurrencyInstance(Locale.GERMANY) // Uses Euro (€) symbol
 
 private fun monthLabel(month: Int): String {
     val calendar = Calendar.getInstance().apply { set(Calendar.MONTH, month - 1) }

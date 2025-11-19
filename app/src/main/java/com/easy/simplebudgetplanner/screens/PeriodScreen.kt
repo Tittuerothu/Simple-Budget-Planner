@@ -729,7 +729,7 @@ private fun TransactionSheet(
 }
 
 private val currencyFormatter: NumberFormat
-    get() = NumberFormat.getCurrencyInstance()
+    get() = NumberFormat.getCurrencyInstance(Locale.GERMANY) // Uses Euro (€) symbol
 
 private fun expenseDate(millis: Long): String {
     val formatter = SimpleDateFormat("MMM d, yyyy", Locale.getDefault())
