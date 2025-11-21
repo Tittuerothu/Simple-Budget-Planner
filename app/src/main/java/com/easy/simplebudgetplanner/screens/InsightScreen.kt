@@ -41,7 +41,7 @@ import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.easy.simplebudgetplanner.data.PlanCycle
-import com.easy.simplebudgetplanner.ui.currencyFormatter
+import com.easy.simplebudgetplanner.currencyFormatter
 
 private data class InsightPoint(
     val label: String,

@@ -18,7 +18,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
@@ -58,16 +57,14 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.easy.simplebudgetplanner.data.PlanCycle
-import com.easy.simplebudgetplanner.ui.autoLabel
-import com.easy.simplebudgetplanner.ui.currencyFormatter
-import com.easy.simplebudgetplanner.ui.monthLabel
+import com.easy.simplebudgetplanner.autoLabel
+import com.easy.simplebudgetplanner.currencyFormatter
+import com.easy.simplebudgetplanner.monthLabel
 import kotlinx.coroutines.launch
 import java.util.Calendar
 
