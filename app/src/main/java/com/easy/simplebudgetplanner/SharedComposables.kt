@@ -1,4 +1,4 @@
-package com.easy.simplebudgetplanner.ui
+package com.easy.simplebudgetplanner
 
 import java.text.NumberFormat
 import java.text.SimpleDateFormat
