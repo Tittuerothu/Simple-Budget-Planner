@@ -65,11 +65,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.easy.simplebudgetplanner.data.PlanCycle
+import com.easy.simplebudgetplanner.ui.autoLabel
+import com.easy.simplebudgetplanner.ui.currencyFormatter
+import com.easy.simplebudgetplanner.ui.monthLabel
 import kotlinx.coroutines.launch
-import java.text.NumberFormat
-import java.text.SimpleDateFormat
 import java.util.Calendar
-import java.util.Locale
 
 data class BoardUiState(
     val cycles: List<PlanCycle>,
@@ -631,16 +631,4 @@ private fun CycleComposerSheet(
 }
 
 
-private val currencyFormatter: NumberFormat
-    get() = NumberFormat.getCurrencyInstance(Locale.GERMANY) // Uses Euro (€) symbol
-
-private fun monthLabel(month: Int): String {
-    val calendar = Calendar.getInstance().apply { set(Calendar.MONTH, month - 1) }
-    return SimpleDateFormat("MMMM", Locale.getDefault()).format(calendar.time)
-}
-
-private fun autoLabel(): String {
-    val now = Calendar.getInstance()
-    val format = SimpleDateFormat("MMMM yyyy", Locale.getDefault())
-    return format.format(now.time)
-}
+// Shared helper functions moved to SharedComposables.kt

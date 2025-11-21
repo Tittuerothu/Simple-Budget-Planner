@@ -41,8 +41,7 @@ import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.easy.simplebudgetplanner.data.PlanCycle
-import java.text.NumberFormat
-import java.util.Locale
+import com.easy.simplebudgetplanner.ui.currencyFormatter
 
 private data class InsightPoint(
     val label: String,
@@ -304,7 +303,6 @@ private fun InsightChart(points: List<InsightPoint>) {
     }
 }
 
-private val currencyFormatter: NumberFormat
-    get() = NumberFormat.getCurrencyInstance(Locale.GERMANY) // Uses Euro (€) symbol
+// Shared helper functions moved to SharedComposables.kt
 
 

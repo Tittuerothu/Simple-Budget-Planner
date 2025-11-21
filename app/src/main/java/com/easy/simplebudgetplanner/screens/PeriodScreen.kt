@@ -62,11 +62,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.easy.simplebudgetplanner.data.CycleLedger
 import com.easy.simplebudgetplanner.data.PlanTransaction
+import com.easy.simplebudgetplanner.ui.currencyFormatter
+import com.easy.simplebudgetplanner.ui.expenseDate
+import com.easy.simplebudgetplanner.ui.monthLabel
 import kotlinx.coroutines.launch
-import java.text.NumberFormat
-import java.text.SimpleDateFormat
 import java.util.Calendar
-import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -728,15 +728,4 @@ private fun TransactionSheet(
     }
 }
 
-private val currencyFormatter: NumberFormat
-    get() = NumberFormat.getCurrencyInstance(Locale.GERMANY) // Uses Euro (€) symbol
-
-private fun expenseDate(millis: Long): String {
-    val formatter = SimpleDateFormat("MMM d, yyyy", Locale.getDefault())
-    return formatter.format(millis)
-}
-
-private fun monthLabel(month: Int): String {
-    val calendar = Calendar.getInstance().apply { set(Calendar.MONTH, month - 1) }
-    return SimpleDateFormat("MMMM", Locale.getDefault()).format(calendar.time)
-}
+// Shared helper functions moved to SharedComposables.kt
